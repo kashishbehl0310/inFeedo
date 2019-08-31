@@ -1,0 +1,18 @@
+.commentSection{
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.commentSection h6{
+    margin: 0;
+    font-weight: bold;
+}
+
+.commentSection p:nth-child(2){
+    margin-bottom: 16px;
+    font-size: 15px;
+    font-style: italic;
+}
+

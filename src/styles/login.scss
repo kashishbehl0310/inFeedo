@@ -1,0 +1,92 @@
+.login-body{
+    margin: 0 auto -236px;
+    background-color: black;
+    opacity: 0.9;
+    max-width: 450px;
+    color: #fff;
+    padding: 30px 68px 30px 68px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); 
+}
+
+.login-body div .login-content h1{
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 28px 0;
+}
+
+.login-body div .login-content form fieldset{
+    border: none;
+    margin-bottom: 10px;
+    position: relative;
+}
+.login-body div .login-content form fieldset input{
+    width: 90%;
+    border-radius: 8px;
+    padding: 4px 18px 0px 18px !important;
+    height: 58px !important;
+    color: #fff;
+    border: none;
+    background-color: #333;
+    opacity: 1;
+    font-size: 19px;
+    box-shadow: none;
+}
+.login-body div .login-content form fieldset label{
+    height: 33px;
+    position: absolute;
+    top: 15%;
+    left: 28px;
+    /* bottom: 30px; */
+    color: #8c8c8c;
+    font-size: 16px;
+    transition: all 200ms;
+}
+.login-body div .login-content form fieldset button {
+    position: absolute;
+    color:#8c8c8c;
+    font-size: 14px;
+    border: 0;
+    background: 0 0;
+    flex-grow: 0;
+    flex-shrink: 0; 
+    height: 50px;
+    padding: 0 12px;
+    cursor: pointer;
+}
+.login-body div .login-content form fieldset input:focus + label{
+    font-weight: 700;
+    margin-top: 7px;
+    font-size: 12px;
+    transform: translate3d(0,-10px, 0)
+}
+.signup-button{
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #e50914;
+    padding: 16px;
+    width: 100%;
+    border: none;
+    margin-top: 30px;
+    color: #fff;
+}
+.signin-now{
+    color: #737373;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 16px;
+}
+.signin-now a{
+    text-decoration: none;
+    color: #fff;
+}
+
+@media(max-width: 400px){
+    .login-body{
+        width: 273px;
+        max-width: 280px;
+        padding: 14px 5px 30px 16px;
+        
+    }
+}
