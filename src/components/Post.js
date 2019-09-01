@@ -14,7 +14,7 @@ class Post extends React.Component{
                         <div className="card-body">
                             <div className="container">
                                   <div className="row">
-                                <div className="col-lg-10 col-xs-12 col-sm-12">
+                                <div className="col-lg-10 col-xs-12 col-sm-12 title">
                                     <h5 className="card-title">{PostData.title}</h5>
                                     
                                 </div>
