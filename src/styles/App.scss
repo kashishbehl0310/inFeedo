@@ -1,4 +1,5 @@
 body{
-    // background: linear-gradient(-135deg, #c850c0, #4158d0);
-    background-color: darken($color: #fff, $amount: 4%);
+    background-image: linear-gradient(to right, #ff00cc 0%, #333399 51%, #ff00cc 100%)
+    // background-color: darken($color: #fff, $amount: 4%);  
+    // background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%);
 }

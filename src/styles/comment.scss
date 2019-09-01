@@ -12,7 +12,25 @@
 
 .commentSection p:nth-child(2){
     margin-bottom: 16px;
-    font-size: 15px;
+    font-size: 13px;
+    font-family: Montserrat, sans-serif;
     font-style: italic;
+}
+
+.commentSection p:nth-child(3){
+    font-family: Montserrat, sans-serif;
+    font-size: 13px;
+}
+
+@media(max-width: 420px){
+    .commentSection h6{
+        font-size: 14px;
+    }
+    .commentSection p:nth-child(2){
+        font-size: 12px;
+    }
+    .commentSection p:nth-child(3){
+        font-size: 12px;
+    }
 }
 

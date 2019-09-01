@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from "axios";
-import { Redirect } from "react-router-dom"
+import { Redirect } from "react-router-dom";
+import illustration from '../assets/illustration.png';
 
 export class LoginForm extends Component{
     constructor(props){
@@ -34,7 +35,7 @@ export class LoginForm extends Component{
                 })
             } else if(!emailCheckRegex.test(email)){
                 this.setState({
-                    validEmail: false
+                    validEmail: false,
                 })
             }
         }
@@ -48,7 +49,8 @@ export class LoginForm extends Component{
         if(!this.state.validPassword){
             if(password.length > 4){
                 this.setState({
-                    validPassword: true
+                    validPassword: true,
+                    isButtonVisible: true
                 })
             } else if(password.length <= 4){
                 this.setState({
@@ -65,7 +67,8 @@ export class LoginForm extends Component{
             })
         } else {
             this.setState({
-                formValid: false
+                formValid: false,
+                error: 'Please enter a valid email or password'
             })
         }
     }
@@ -76,15 +79,18 @@ export class LoginForm extends Component{
         })
     }
     render(){
-        const { formValid } = this.state;
+        const { formValid, error } = this.state;
         if(formValid){
             return <Redirect to="/home" />
         }
         return(
-            <div className="login-body">
+            <div className="loginPage">
+                <div className="login-body">
+                <img className="illustration" src={illustration} />
                 <div>
                     <div className="login-content">
                         <h1>Sign In</h1>
+                        <p className="error">{error}</p>
                         <form>
                             <fieldset>
                                 <input className="formControl" type="text" name="email" value={this.state.email} onChange={this.onChange} />
@@ -95,16 +101,22 @@ export class LoginForm extends Component{
                                 <label className="form-placeholder" for="password" >Password</label>
                                 {/* <button onClick={this.toggleShowPassword} > {(this.state.secureInput) ? 'Show' : 'Hide' }</button> */}
                                 {
-                                    this.state.isButtonVisible && <button onClick={this.toggleShowPassword} > {(this.state.secureInput) ? 'Show' : 'Hide' }</button>
+                                    this.state.isButtonVisible && <button onClick={this.toggleShowPassword} className="toggleButton" > {(this.state.secureInput) ? 'Show' : 'Hide' }</button>
                                 }
                                 
                             </fieldset>
+                            {
+                                    this.state.isButtonVisible && <button onClick={this.toggleShowPassword} className="toggleButton-displayxs" > {(this.state.secureInput) ? 'Show password' : 'Hide password' }</button>
+                            }
                             <button className="signup-button" onClick={this.handleSignIn} >Sign In</button>
-                            
+                            <p className="credentials">*Use email kashish@mail.com and password any string of more than 4 characters</p>
                         </form>
                     </div>
                 </div>
             </div>
+
+            </div>
+            
         )
     }
 }

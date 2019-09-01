@@ -1,15 +1,25 @@
-.login-body{
-    margin: 0 auto -236px;
-    background-color: black;
-    opacity: 0.9;
-    max-width: 450px;
-    color: #fff;
-    padding: 30px 68px 30px 68px;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); 
+.loginPage{
+    height: 100%;
+    // background: linear-gradient(-135deg, #c850c0, #4158d0);
+    // background-size: cover;
 }
-
+.login-body{
+    margin: 50px auto;
+    background-color: #fff;
+    opacity: 0.9;
+    max-width: 771px;
+    color: #333;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 65px 30px 0px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.login-body div .login-content {
+    max-width: 300px;
+}
 .login-body div .login-content h1{
-    color: #fff;
+    font-family: 'Montserrat', sans-serif;
     font-size: 32px;
     font-weight: 700;
     margin: 0 0 28px 0;
@@ -21,13 +31,13 @@
     position: relative;
 }
 .login-body div .login-content form fieldset input{
-    width: 90%;
-    border-radius: 8px;
-    padding: 4px 18px 0px 18px !important;
+    width: 100%;
+    border-radius: 20px;
+    padding: 17px 18px 0px 26px !important;
     height: 58px !important;
-    color: #fff;
+    color: #333;
     border: none;
-    background-color: #333;
+    background-color: #e6e6e6;
     opacity: 1;
     font-size: 19px;
     box-shadow: none;
@@ -39,12 +49,14 @@
     left: 28px;
     /* bottom: 30px; */
     color: #8c8c8c;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     transition: all 200ms;
 }
-.login-body div .login-content form fieldset button {
+.login-body div .login-content form fieldset .toggleButton {
     position: absolute;
-    color:#8c8c8c;
+    color:#333;
+    font-family: Montserrat-Bold;
     font-size: 14px;
     border: 0;
     background: 0 0;
@@ -54,21 +66,32 @@
     padding: 0 12px;
     cursor: pointer;
 }
+.login-body div .login-content form .toggleButton-displayxs{
+    display: none;
+}
+.login-body div .login-content form fieldset input:focus{
+    border: 1px solid #57b846;
+    outline: none;
+
+}
 .login-body div .login-content form fieldset input:focus + label{
     font-weight: 700;
     margin-top: 7px;
     font-size: 12px;
-    transform: translate3d(0,-10px, 0)
+    transform: translate3d(0,-10px, 0);
+    
 }
 .signup-button{
-    border-radius: 4px;
+    border-radius: 20px;
     font-size: 16px;
     font-weight: 700;
-    background-color: #e50914;
+    background-color: #57b846;
+
+    font-family: 'Montserrat';
     padding: 16px;
     width: 100%;
     border: none;
-    margin-top: 30px;
+    margin-top: 15px;
     color: #fff;
 }
 .signin-now{
@@ -81,12 +104,55 @@
     text-decoration: none;
     color: #fff;
 }
-
-@media(max-width: 400px){
+.error{
+    color: red;
+    font-family: 'Montserrat', sans-serif;
+}
+.credentials{
+    color: grey;
+    font-style: italic;
+    font-size: 13px;
+    width: 100%;
+    word-wrap: break-word;
+    margin: 10px 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+@media(max-width: 420px){
     .login-body{
         width: 273px;
         max-width: 280px;
-        padding: 14px 5px 30px 16px;
+        padding: 16px;
         
     }
+    .login-body .illustration{
+        display: none;
+    }
+    .login-body div .login-content h1{
+        font-size: 22px;
+    }
+    .login-body div .login-content form .toggleButton{
+        display: none;
+    }
+    .login-body div .login-content form fieldset input{
+        height: 50px !important;
+        font-size: 16px;
+    }
+    .login-body div .login-content form fieldset label{
+        font-size: 13px;
+    }
+    .login-body div .login-content form .toggleButton-displayxs{
+        display: block;
+        // position: absolute;
+        color:#333;
+        font-family: Montserrat-Bold;
+        font-size: 14px;
+        border: 0;
+        margin: 0 auto;
+        background: 0 0;
+        flex-grow: 0;
+        flex-shrink: 0; 
+        height: 50px;
+        padding: 0 12px;
+        cursor: pointer;
+    }   
 }

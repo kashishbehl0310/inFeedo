@@ -3,11 +3,11 @@ import Post from './Post';
 
 class SearchResults extends Component{
     render(){
-        const { SearchValues} = this.props;
+        const { SearchValues, onClick} = this.props;
         const posts = SearchValues.length ?
             SearchValues.map((post, index) => {
                 return(
-                    <Post PostData={post} key={index} />
+                    <Post onClick={onClick} PostData={post} key={index} />
                 )
             }) : 
             <div className="text-center">

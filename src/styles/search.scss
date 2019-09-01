@@ -12,5 +12,11 @@
     border: 1px solid #eee;
     border-radius: 10px;
     outline: 0;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4);
+}
+
+@media(max-width: 420px){
+    .search-wrapper{
+        width: 300px;
+    }
 }
